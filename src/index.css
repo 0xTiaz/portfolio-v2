@@ -1,0 +1,74 @@
+@import 'tailwindcss';
+
+/*
+  Colores y tokens del portfolio.
+  Cambia estos valores para personalizar todo el sitio.
+*/
+@theme {
+  --font-sans: 'Outfit', system-ui, -apple-system, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+  --color-page: #f8fafc;
+  --color-surface: #ffffff;
+  --color-muted: #5c6370;
+  --color-heading: #0f172a;
+  --color-line: #e2e8f0;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-soft: #4f46e51a;
+
+  --shadow-card: 0 10px 30px rgb(15 23 42 / 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-page: #0f172a;
+    --color-surface: #1e293b;
+    --color-muted: #94a3b8;
+    --color-heading: #f1f5f9;
+    --color-line: #334155;
+    --color-accent: #818cf8;
+    --color-accent-hover: #a5b4fc;
+    --color-accent-soft: #818cf826;
+
+    --shadow-card: 0 10px 30px rgb(0 0 0 / 0.35);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply m-0 min-h-svh bg-page font-sans text-base font-normal leading-relaxed text-muted antialiased;
+  }
+
+  #root {
+    @apply flex min-h-svh flex-col;
+  }
+
+  a {
+    @apply text-accent no-underline transition-colors hover:text-accent-hover;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply m-0 font-display font-light text-heading;
+  }
+
+  h3 {
+    @apply text-xl tracking-tight;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
