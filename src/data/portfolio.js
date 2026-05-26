@@ -79,6 +79,7 @@ export const portfolio = {
   social: [
     { label: 'GitHub', href: 'https://github.com/0xTiazz' },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/matias-figueroa-abb76524b/' },
+    { label: 'Instagram', href: 'https://www.instagram.com/0xtiazz/' },
   ],
   skills: ['JavaScript', 'React', 'HTML', 'CSS', 'Vite', 'Git', 'Responsive Design', 'MongoDB', 'MySql', 'MariaDB','SAP B1', 'HanaB1','Integracion de Software','API','Axios','Express','Desarrollo con IA','Cursor','Excel','Jira','GitHub','Git','Node','Props'],
   projects: [
